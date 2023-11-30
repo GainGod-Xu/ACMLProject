@@ -1,4 +1,4 @@
-from DatasetModels.CMRPDataset import CMRPDataset
+from DatasetModels.ACMLDataset import ACMLDataset
 from DatasetModels.GraphDataset import GraphDataset
 from DatasetModels.ImageDataset import ImageDataset
 from DatasetModels.CNMRDataset import CNMRDataset
@@ -36,7 +36,7 @@ def build_dataset_loader(dataframe, CMRPConfig):
     mr2_dataset = dataset_mapping.get(mr2_name)(dataframe[mr2_name], CMRPConfig)
 
     # Create CGIPDataset instance
-    cmrp_dataset = CMRPDataset(mr1_dataset, mr2_dataset, CMRPConfig)
+    cmrp_dataset = ACMLDataset(mr1_dataset, mr2_dataset, CMRPConfig)
 
     # load saved data list
     # import torch
