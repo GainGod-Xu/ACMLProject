@@ -40,21 +40,6 @@ class SmilesModel(nn.Module):
         self.dense = nn.Linear(self.feature_dim, self.feature_dim)
 
     def forward(self, input):
-
-        ## preprocess smiles tokenization in dataset collate_fn
-        # smiles_ids = []
-        # smiles_mask = []
-        # for smiles in input:
-        #     encode_dict = self.smiles_tokenizer.encode_plus(
-        #         text=smiles,
-        #         max_length=self.smiles_maxlen,
-        #         padding='max_length',
-        #         truncation=True)
-        #     smiles_ids.append(encode_dict['input_ids'])
-        #     smiles_mask.append(encode_dict['attention_mask'])
-        #
-        # smiles_ids = torch.tensor(smiles_ids).to(self.device)
-        # smiles_mask = torch.tensor(smiles_mask).to(self.device)
         hidden_states = self.model(input[:,:,0], input[:,:,1])[0][:, 0]
         features = self.dense(hidden_states)
         features = features / features.norm(dim=-1, keepdim=True)

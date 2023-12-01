@@ -100,19 +100,5 @@ class ImageDataset(Dataset):
         img_PIL = ImageOps.autocontrast(img_PIL)
         tensor = transforms.ToTensor()(img_PIL) # size [1, 224, 224]
         
-        ## Original transformations, used for data augmentation.
-        # image = cls.fit_image(image)
-        # img_PIL = transforms.RandomRotation((-15, 15), resample=3, expand=True, center=None, fill=255)(image)
-        # img_PIL = transforms.ColorJitter(brightness=[0.75, 2.0], contrast=0, saturation=0, hue=0)(img_PIL)
-        # shear_value = np.random.uniform(0.1, 7.0)
-        # shear = random.choice([[0, 0, -shear_value, shear_value], [-shear_value, shear_value, 0, 0],
-        #                        [-shear_value, shear_value, -shear_value, shear_value]])
-        # img_PIL = transforms.RandomAffine(0, translate=None, scale=None,
-        #                                   shear=shear, resample=3, fillcolor=255)(img_PIL)
-        # img_PIL = ImageEnhance.Contrast(ImageOps.autocontrast(img_PIL)).enhance(2.0)
-        # img_PIL = transforms.Resize((224, 224), interpolation=3)(img_PIL)
-        # img_PIL = ImageOps.autocontrast(img_PIL)
-        # tensor = transforms.ToTensor()(img_PIL)
-        
         return tensor
 

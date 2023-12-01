@@ -22,21 +22,6 @@ class ACMLModel(nn.Module):
 
     def forward(self, batch):
 
-        # Getting pre-Embeddings(features) of mr1 and mr2 from Encoders (acceptable with different dimension)
-
-        ## (deprecated)
-        # batch_mr1 = batch[self.mr1_name]
-        # batch_mr2 = batch[self.mr2_name]
-        #
-        # # do not load smiles data to device.
-        # if not self.mr1_name == "smiles":
-        #     batch_mr1 = batch_mr1.to(self.device)
-        # if not self.mr2_name == "smiles":
-        #     batch_mr2 = batch_mr2.to(self.device)
-        #
-        # mr1_features = self.mr1_encoder(batch_mr1)
-        # mr2_features = self.mr2_encoder(batch_mr2)
-
         mr1_features = self.mr1_encoder(batch[self.mr1_name].to(self.device))
         mr2_features = self.mr2_encoder(batch[self.mr2_name].to(self.device))
 
