@@ -113,7 +113,7 @@ It evaluates the highest similarity scores in a given batch and derives top accu
 
 ## Citation 
 
-If you use this code or its corresponding [paper](https://arxiv.org/abs/2311.06456), please cite our work as follows:
+If you use this code or its corresponding [paper](https://pubs.acs.org/doi/full/10.1021/acs.jcim.5c00430), please cite our work as follows:
 
 ```
 @article{wang2025advancing,
