@@ -116,11 +116,12 @@ It evaluates the highest similarity scores in a given batch and derives top accu
 If you use this code or its corresponding [paper](https://arxiv.org/abs/2311.06456), please cite our work as follows:
 
 ```
-@article{xu2023asymmetric,
-  title={Asymmetric Contrastive Multimodal Learning for Advancing Chemical Understanding},
-  author={Xu, Hao and Wang, Yifei and Li, Yunrui and Hong, Pengyu},
-  journal={arXiv preprint arXiv:2311.06456},
-  year={2023}
+@article{wang2025advancing,
+  title={Advancing Drug Discovery with Enhanced Chemical Understanding via Asymmetric Contrastive Multimodal Learning},
+  author={Wang, Yifei and Li, Yunrui and Liu, Lin and Hong, Pengyu and Xu, Hao},
+  journal={Journal of chemical information and modeling},
+  year={2025},
+  publisher={ACS Publications}
 }
 ```
 
